@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//esta clase personalizada es para la version de celulares. es la talla que tomaran
+@layer utilities {
+    .section-min-height{
+        min-height: calc(100vh - 68px)
+    }
+}

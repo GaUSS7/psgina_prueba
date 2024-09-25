@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+
+    <!-- este header es en donde ira el contenido de busqueda de la pagina-->
+    <header class="bg-teal-700 text-white sticky top-0 z-10">
+        <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-3xl font-medium">
+                Registros
+            </h1>
+            <div>
+                <button id="hamburger-open-button" class="text-3xl md:hidden focus:outline-none cursor-pointer">
+                    &#9776;
+                </button>
+                <!-- este nav es para la navegacion de la paginas-->
+                <nav class="hidden sm:block space-x-8 text-xl " aria-label="main">
+                    <a href="page4.html" class="hover:opacity-90">Atributos</a>
+                    <a href="page3.html" class="hover:opacity-90">Registros</a>
+                    <a href="page2.html" class="hover:opacity-90">Gestores</a>
+                    <a href="index.html" class="hover:opacity-90">Base de datos</a>
+                </nav>
+            </div>
+        </section>
+        <!-- este secction de aqui es la animacion de la pagina caundo alcanza los piexeles de un telefono-->
+        <section id="mobile-menu"
+            class="absolute top-0 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+            <button class="text-8xl self-end px-6">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+                <a href="page4.html" class="w-full text-center py-6 hover:opacity-90">Atributos</a>
+                <a href="page3.html" class="w-full text-center py-6 hover:opacity-90">Registros</a>
+                <a href="page2.html" class="w-full text-center py-6 hover:opacity-90">Gestores</a>
+                <a href="index.html" class="w-full text-center py-6 hover:opacity-90">Base de datos</a>
+            </nav>
+        </section>
+    </header>
+    <!--Dentro de este  main ira el contenido princirpal de la pagina-->
+    <main class="max-w-4xl mx-auto">
+
+        <!-- este Section and article es la parte principal de la pagina, aqui va la primera parte de informacion e imagenes-->
+        <section id="hero"
+            class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:screen:section-min-height">
+            <!--aqui estan las clases que creaste: widescreen:section-min-height tallscreen:screen:section-min-height -->
+            <article class="sm:w-1/2">
+                <h2
+                    class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
+                    Registros en <span class="text-indigo-700 dark:text-indigo-300">Base de datos</span>
+                </h2>
+                <p class="max-w-mad text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+                    Un registro en una base de datos es un objeto que puede tener uno o más valores. Luego, los grupos
+                    de registros se guardan en una tabla; la tabla determina los datos que puede tener cada registro.
+                    Varias tablas contienen varios registros en una base de datos.
+                </p>
+                <p class="max-w-mad text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+                    Y reglas de las de las tablas
+                </p>
+            </article>
+            <img class="w-1/2" src="img/1727034952629.png" alt="imagen de base de datos">
+            <!-- la imagen sale del lado izquierdo-->
+        </section>
+
+        <hr class="mx-auto bg-black dark:bg-white w-1/2">
+
+        <!-- este Section de aqui mostrara la informacion extra-->
+        <section id="sql"
+            class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:screen:section-min-height">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+                Reglas o niveles de normalización
+            </h2>
+            <!-- dentro de cada Figure hay un texto en donde estaran dentro de comillas dobles, junto con ello el donde seque la informacion
+             son 3-->
+
+            <!--este es el primero-->
+            <figure class="my-12">
+                <!-- estos blackquote son las comillas dobles-->
+                <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+
+                    <!-- esta paragrabh de aqui es para escribir el texto de infromacion-->
+                    <p
+                        class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        Primera forma normal.
+                        Elimine los grupos repetidos de las tablas individuales.
+                        Cree una tabla independiente para cada conjunto de datos relacionados.
+                        Identifique cada conjunto de datos relacionados con una clave principal.
+                    </p>
+                </blockquote>
+                <!-- este figcaption es para hacer mension de donde saque la informacion-->
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                    &#8212;Primera forma normal.
+                </figcaption>
+            </figure>
+
+            <!--este es el segundo-->
+            <figure class="my-12">
+                <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+
+                    <p
+                        class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        Segunda forma normal
+                        Cree tablas independientes para conjuntos de valores que se apliquen a varios registros.
+                        Relacione estas tablas con una clave externa.
+                    </p>
+                </blockquote>
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                    &#8212;Segunda forma normal
+                </figcaption>
+            </figure>
+
+            <!--este es el tercero-->
+            <figure class="my-12">
+                <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+
+                    <p
+                        class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        Tercera forma normal
+                        Elimine los campos que no dependan de la clave.
+                        Cada nivel de normalización exige cierta complejidad, pero debes analizar si en realidad
+                        necesitas llegar hasta la tercera forma normal, debes buscar lo que mejor se adapte a la
+                        empresa.
+                    </p>
+                </blockquote>
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                    &#8212;Tercera forma normal
+                </figcaption>
+            </figure>
+        </section>
+
+        <hr class="mx-auto bg-black dark:bg-white w-1/2">
+
+        <section id="sql"
+            class="p-6 my-12 scroll-mt-16 widescreen:section-min-height tallscreen:screen:section-min-height">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+        
+            </h2>
+        </section>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
